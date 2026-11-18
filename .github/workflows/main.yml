@@ -1,17 +1,11 @@
-name: Obtener token de ToDus
+name: Prueba de ToDus
+
 on:
   workflow_dispatch:
 
 jobs:
-  get-token:
+  probar:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - run: pip install -U todus
-      - name: Ejecutar y esperar entrada
-        env:
-          TODUS_PHONE: ${{ secrets.TODUS_PHONE }}
-        run: python get_token.py
+      - name: Imprimir mensaje
+        run: echo "Hola, el workflow funciona"
