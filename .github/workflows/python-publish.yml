@@ -1,0 +1,11 @@
+name: Prueba de ToDus
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Imprimir mensaje
+        run: echo "Hola, el workflow funciona"
